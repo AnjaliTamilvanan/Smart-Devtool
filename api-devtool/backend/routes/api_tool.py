@@ -2,6 +2,7 @@ from fastapi import APIRouter
 from schemas.api_schema import APIRequest
 from services.scraper import scrape_api_docs
 from services.ai_parser import parse_api_docs
+from services.code_generator import generate_code
 
 router = APIRouter()
 
@@ -13,8 +14,12 @@ async def analyze_api(data: APIRequest):
     # Step 2: Parse scraped text using AI
     structured = parse_api_docs(raw_text, data.use_case)
 
-    # Step 3: Return structured response
+    # Step 3: Generate code from structured data
+    code = generate_code(structured, data.language)
+
+    # Step 4: Return full response
     return {
-        "message": "API analyzed successfully",
-        "structured_data": structured
+        "message": "API analyzed and code generated successfully",
+        "structured_data": structured,
+        "generated_code": code
     }
