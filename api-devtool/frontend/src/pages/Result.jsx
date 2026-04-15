@@ -28,8 +28,15 @@ function Result() {
       <h2>📊 Extracted API Info</h2>
       <pre className="box">
         {typeof result.structured_data === "string"
-  ? result.structured_data.replace(/```json|```/g, "")
-  : JSON.stringify(result.structured_data, null, 2)}
+          ? result.structured_data.replace(/```json|```/g, "")
+          : JSON.stringify(result.structured_data, null, 2)}
+      </pre>
+
+      <h2>📦 SDK Suggestion</h2>
+      <pre className="box">
+        {typeof result.structured_data === "string"
+          ? result.structured_data
+          : result.structured_data?.sdk_suggestion || "No SDK suggestion available"}
       </pre>
 
       <h2>💻 Generated Code</h2>
