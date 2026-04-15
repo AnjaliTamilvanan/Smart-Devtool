@@ -27,7 +27,9 @@ function Result() {
     <div className="container">
       <h2>📊 Extracted API Info</h2>
       <pre className="box">
-        {JSON.stringify(result.structured_data, null, 2)}
+        {typeof result.structured_data === "string"
+  ? result.structured_data.replace(/```json|```/g, "")
+  : JSON.stringify(result.structured_data, null, 2)}
       </pre>
 
       <h2>💻 Generated Code</h2>
