@@ -39,3 +39,36 @@ button {
   text-align: left;
   overflow-x: auto;
 }
+
+/* ✅ NEW: ChatGPT-style copy icon */
+.code-container {
+  position: relative;
+}
+
+.copy-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #334155;
+  border: none;
+  color: white;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.copy-icon:hover {
+  opacity: 1;
+  background: #475569;
+}
+
+.loader-container {
+  margin-top: 20px;
+}
+
+.loading-text {
+  font-size: 16px;
+  color: #cbd5f5;
+}
