@@ -10,6 +10,25 @@ body {
   padding: 40px;
 }
 
+/* 🔥 HEADINGS UPDATED */
+h1, h2 {
+  color: #818cf8; /* purple like "Generating code" */
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 26px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* FORM */
 .form {
   display: flex;
   flex-direction: column;
@@ -26,21 +45,26 @@ button {
   border: none;
 }
 
+/* BUTTON */
 button {
   background: #6366f1;
   color: white;
   cursor: pointer;
 }
 
+/* 🔥 BOX TEXT SMALLER */
 .box {
   background: #1e293b;
   padding: 15px;
   border-radius: 10px;
   text-align: left;
   overflow-x: auto;
+
+  font-size: 14px;   /* 👈 smaller than headings */
+  line-height: 1.5;
 }
 
-/* ✅ NEW: ChatGPT-style copy icon */
+/* ✅ ChatGPT-style copy icon */
 .code-container {
   position: relative;
 }
@@ -64,6 +88,7 @@ button {
   background: #475569;
 }
 
+/* LOADER */
 .loader-container {
   margin-top: 20px;
 }
